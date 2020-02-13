@@ -1,7 +1,7 @@
 # cppgen.sh
 A simple bash script to generate .h and .cpp
 
-#Example
+# Example
 This script generate an empty .cpp file and a .h file like this:
 ```
 #ifndef __TEST_H__
