@@ -3,6 +3,9 @@
 # a simple script to generate .h and .cpp files with the arguments of the script
 echo "Generating...";
 touch main.cpp;
+touch Makefile;
+echo -n "all:
+	g++ -Wall -g -o out main.cpp " > Makefile;
 for fn in $@
 do
     touch $fn.cpp $fn.h;
@@ -18,6 +21,7 @@ class $fn{
 
 #endif" > $fn.h;
     echo "$fn.cpp $fn.h done!";
+    echo "$fn.cpp " >> Makefile;
     echo "#include \"$fn.h\"" >> main.cpp;
 done
 echo "
