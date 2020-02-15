@@ -21,7 +21,7 @@ class $fn{
 
 #endif" > $fn.h;
     echo "$fn.cpp $fn.h done!";
-    echo "$fn.cpp " >> Makefile;
+    echo -n "$fn.cpp " >> Makefile;
     echo "#include \"$fn.h\"" >> main.cpp;
 done
 echo "
